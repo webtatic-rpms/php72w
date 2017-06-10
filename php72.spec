@@ -27,7 +27,7 @@
 %global _hardened_build 1
 
 # version used for minor release purposes
-%global minor_release 7.1
+%global minor_release 7.2
 
 # version used for php embedded library soname
 %global embed_version %{minor_release}
@@ -105,14 +105,16 @@
 %global db_devel  libdb-devel
 %endif
 
+%global rcver alpha1
+
 Summary: PHP scripting language for creating dynamic web sites
 %if 0%{?scl:1}
 Name: %{?scl_prefix}php
 %else
-Name: php71w
+Name: php72w
 %endif
-Version: 7.1.6
-Release: 1%{?rcver:.%{rcver}}%{?dist}
+Version: 7.2.0
+Release: 0.1%{?rcver:.%{rcver}}%{?dist}
 # All files licensed under PHP version 3.01, except
 # Zend is licensed under Zend
 # TSRM is licensed under BSD
@@ -120,7 +122,7 @@ License: PHP and Zend and BSD
 Group: Development/Languages
 URL: http://www.php.net/
 
-Source0: https://secure.php.net/distributions/php-%{version}%{?rcver}.tar.bz2
+Source0: https://downloads.php.net/~pollita/php-%{version}%{?rcver}.tar.bz2
 Source1: php.conf
 Source2: php.ini
 Source3: macros.php
@@ -1910,51 +1912,6 @@ fi
 %files mysqlnd -f files.mysqlnd
 
 %changelog
-* Sat Jun 10 2017 Andy Thompson <andy@webtatic.com> - 7.1.6-1
-- update to php-7.1.6
-
-* Thu May 11 2017 Andy Thompson <andy@webtatic.com> - 7.1.5-1
-- update to php-7.1.5
-
-* Sat Apr 15 2017 Andy Thompson <andy@webtatic.com> - 7.1.4-1
-- update to php-7.1.4
-
-* Sun Mar 19 2017 Andy Thompson <andy@webtatic.com> - 7.1.3-1
-- update to php-7.1.3
-- Update dlopen patch with upstream changes
-
-* Sat Feb 18 2017 Andy Thompson <andy@webtatic.com> - 7.1.2-1
-- update to php-7.1.2
-
-* Thu Jan 19 2017 Andy Thompson <andy@webtatic.com> - 7.1.1-1
-- update to php-7.1.1
-
-* Sat Dec 03 2016 Andy Thompson <andy@webtatic.com> - 7.1.0-1
-- update to php-7.1.0
-
-* Thu Nov 10 2016 Andy Thompson <andy@webtatic.com> - 7.1.0-0.7.RC6
-- update to php-7.1.0RC6
-
-* Sun Oct 30 2016 Andy Thompson <andy@webtatic.com> - 7.1.0-0.6.RC5
-- update to php-7.1.0RC5
-
-* Sat Oct 22 2016 Andy Thompson <andy@webtatic.com> - 7.1.0-0.5.RC4
-- update to php-7.1.0RC4
-- update systzdata patch for compatibility
-- update jsonver to latest upstream version
-
-* Sun Oct 02 2016 Andy Thompson <andy@webtatic.com> - 7.1.0-0.4.RC3
-- update to php-7.1.0RC3
-
-* Sat Sep 17 2016 Andy Thompson <andy@webtatic.com> - 7.1.0-0.3.RC2
-- update to php-7.1.0RC2
-- update apiver to latest upstream version
-
-* Fri Sep 02 2016 Andy Thompson <andy@webtatic.com> - 7.1.0-0.2.RC1
-- update to php-7.1.0RC1
-- update jsonver to latest upstream version
-
-* Sat Aug 20 2016 Andy Thompson <andy@webtatic.com> - 7.1.0-0.1.beta3
-- fork php70w package
-- update to php-7.1.0beta3
-- rename php71w to mod_php71w
+* Sat Jun 10 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.1.alpha1
+- fork php71w package
+- update to php-7.2.0alpha1
