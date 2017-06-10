@@ -138,10 +138,10 @@ Source50: opcache.ini
 Source51: opcache-default.blacklist
 
 # Build fixes
-Patch5: php-5.2.0-includedir.patch
+Patch5: php-7.2.0alpha1-includedir.patch
 Patch6: php-5.2.4-embed.patch
 Patch7: php-5.3.0-recode.patch
-Patch8: php-7.0.2-libdb.patch
+Patch8: php-7.2.0alpha1-libdb.patch
 
 # Fixes for extension modules
 
@@ -153,7 +153,7 @@ Patch43: php-5.4.0-phpize.patch
 # Use -lldap_r for OpenLDAP
 Patch45: php-5.4.8-ldap_r.patch
 # Make php_config.h constant across builds
-Patch46: php-5.4.9-fixheader.patch
+Patch46: php-7.2.0alpha1-fixheader.patch
 # drop "Configure command" from phpinfo output
 Patch47: php-5.4.9-phpinfo.patch
 Patch48: php-5.5.0-icuconfig.patch
@@ -1915,3 +1915,4 @@ fi
 * Sat Jun 10 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.1.alpha1
 - fork php71w package
 - update to php-7.2.0alpha1
+- update patches to work with upstream changes
