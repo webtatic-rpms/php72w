@@ -14,13 +14,13 @@
 %endif
 
 # API/ABI check
-%global apiver      20160303
+%global apiver      20160731
 %global zendver     20160303
-%global pdover      20150127
+%global pdover      20170320
 # Extension version
 %global fileinfover 1.0.5
 %global pharver     2.0.2
-%global zipver      1.13.5
+%global zipver      1.14.0
 %global jsonver     1.5.0
 
 # Adds -z now to the linker flags
@@ -1916,3 +1916,4 @@ fi
 - fork php71w package
 - update to php-7.2.0alpha1
 - update patches to work with upstream changes
+- update version checks to latest upstream versions
