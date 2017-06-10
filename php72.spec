@@ -832,22 +832,6 @@ Provides: php-dba%{?_isa} = %{version}-%{release}
 The %{name}-dba package contains a dynamic shared object that will add
 support for using the DBA database abstraction layer to PHP.
 
-%package mcrypt
-Summary: Standard PHP module provides mcrypt library support
-Group: Development/Languages
-# All files licensed under PHP version 3.01
-License: PHP
-Requires: %{name}-common%{?_isa} = %{version}-%{release}
-BuildRequires: libmcrypt-devel
-%if 0%{!?scl:1}
-Provides: php-mcrypt = %{version}-%{release}
-Provides: php-mcrypt%{?_isa} = %{version}-%{release}
-%endif
-
-%description mcrypt
-The %{name}-mcrypt package contains a dynamic shared object that will add
-support for using the mcrypt library to PHP.
-
 %package tidy
 Summary: Standard PHP module provides tidy library support
 Group: Development/Languages
@@ -1251,7 +1235,6 @@ with_shared="--with-imap=shared --with-imap-ssl \
 %endif
       --with-pspell=shared \
       --enable-phar=shared \
-      --with-mcrypt=shared,%{_root_prefix} \
       --with-tidy=shared,%{_root_prefix} \
       --enable-sysvmsg=shared --enable-sysvshm=shared --enable-sysvsem=shared \
       --enable-shmop=shared \
@@ -1601,7 +1584,7 @@ for mod in pgsql odbc ldap snmp xmlrpc imap \
 %endif
     interbase pdo_firebird \
     enchant phar fileinfo intl \
-    mcrypt tidy pdo_dblib pspell curl wddx \
+    tidy pdo_dblib pspell curl wddx \
     posix shmop sysvshm sysvsem sysvmsg recode xml; do
 
     # Make sure wddx is loaded after the xml extension, which it depends on
@@ -1900,7 +1883,6 @@ fi
 %doc libbcmath_COPYING
 %files dba -f files.dba
 %files pdo -f files.pdo
-%files mcrypt -f files.mcrypt
 %files tidy -f files.tidy
 %files pdo_dblib -f files.pdo_dblib
 %files pspell -f files.pspell
@@ -1917,3 +1899,4 @@ fi
 - update to php-7.2.0alpha1
 - update patches to work with upstream changes
 - update version checks to latest upstream versions
+- remove mcrypt extension build
