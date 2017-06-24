@@ -15,7 +15,7 @@
 
 # API/ABI check
 %global apiver      20160731
-%global zendver     20160303
+%global zendver     20160731
 %global pdover      20170320
 # Extension version
 %global fileinfover 1.0.5
@@ -1896,6 +1896,7 @@ fi
 %changelog
 * Sat Jun 24 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.2.alpha2
 - update to php-7.2.0alpha2
+- update version checks to latest upstream versions
 
 * Sat Jun 10 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.1.alpha1
 - fork php71w package
