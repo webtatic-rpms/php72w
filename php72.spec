@@ -832,6 +832,21 @@ Provides: php-dba%{?_isa} = %{version}-%{release}
 The %{name}-dba package contains a dynamic shared object that will add
 support for using the DBA database abstraction layer to PHP.
 
+%package sodium
+Summary: Wrapper for the Sodium cryptographic library
+License:        BSD
+Group:          Development/Languages
+BuildRequires:  libsodium-devel >= 0.6.0
+Requires: %{name}-common%{?_isa} = %{version}-%{release}
+%if 0%{!?scl:1}
+Provides: php-sodium = %{version}-%{release}
+Provides: php-sodium%{?_isa} = %{version}-%{release}
+%endif
+
+%description sodium
+The %{name}-sodium package contains a dynamic shared object that will add
+support for libsodium.
+
 %package tidy
 Summary: Standard PHP module provides tidy library support
 Group: Development/Languages
@@ -1235,6 +1250,7 @@ with_shared="--with-imap=shared --with-imap-ssl \
 %endif
       --with-pspell=shared \
       --enable-phar=shared \
+      --with-sodium=shared \
       --with-tidy=shared,%{_root_prefix} \
       --enable-sysvmsg=shared --enable-sysvshm=shared --enable-sysvsem=shared \
       --enable-shmop=shared \
@@ -1269,6 +1285,7 @@ without_shared="--without-gd \
       --disable-simplexml --disable-exif --without-gettext \
       --without-iconv --disable-ftp --without-bz2 --disable-ctype \
       --disable-shmop --disable-sockets --disable-tokenizer \
+      --without-sodium \
       --disable-sysvmsg --disable-sysvshm --disable-sysvsem \
       --disable-opcache"
 
@@ -1584,7 +1601,7 @@ for mod in pgsql odbc ldap snmp xmlrpc imap \
 %endif
     interbase pdo_firebird \
     enchant phar fileinfo intl \
-    tidy pdo_dblib pspell curl wddx \
+    sodium tidy pdo_dblib pspell curl wddx \
     posix shmop sysvshm sysvsem sysvmsg recode xml; do
 
     # Make sure wddx is loaded after the xml extension, which it depends on
@@ -1892,10 +1909,13 @@ fi
 %files interbase -f files.interbase
 %files enchant -f files.enchant
 %files mysqlnd -f files.mysqlnd
+%files sodium -f files.sodium
 
 %changelog
 * Thu Jul 06 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.4.beta1
 - update to php-7.2.0beta1
+- add sodium extension build and package
+
 * Thu Jul 06 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.3.alpha3
 - update to php-7.2.0alpha3
 
