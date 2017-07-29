@@ -14,14 +14,14 @@
 %endif
 
 # API/ABI check
-%global apiver      20160731
-%global zendver     20160731
+%global apiver      20170718
+%global zendver     20170718
 %global pdover      20170320
 # Extension version
 %global fileinfover 1.0.5
 %global pharver     2.0.2
-%global zipver      1.14.0
-%global jsonver     1.5.0
+%global zipver      1.15.1
+%global jsonver     1.6.0
 
 # Adds -z now to the linker flags
 %global _hardened_build 1
@@ -1915,6 +1915,7 @@ fi
 * Thu Jul 06 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.4.beta1
 - update to php-7.2.0beta1
 - add sodium extension build and package
+- update version checks to latest upstream versions
 
 * Thu Jul 06 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.3.alpha3
 - update to php-7.2.0alpha3
