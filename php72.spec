@@ -105,7 +105,7 @@
 %global db_devel  libdb-devel
 %endif
 
-%global rcver beta1
+%global rcver beta2
 
 Summary: PHP scripting language for creating dynamic web sites
 %if 0%{?scl:1}
@@ -114,7 +114,7 @@ Name: %{?scl_prefix}php
 Name: php72w
 %endif
 Version: 7.2.0
-Release: 0.4%{?rcver:.%{rcver}}%{?dist}
+Release: 0.5%{?rcver:.%{rcver}}%{?dist}
 # All files licensed under PHP version 3.01, except
 # Zend is licensed under Zend
 # TSRM is licensed under BSD
@@ -1912,6 +1912,9 @@ fi
 %files sodium -f files.sodium
 
 %changelog
+* Sat Aug 05 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.5.beta2
+- update to php-7.2.0beta2
+
 * Thu Jul 06 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.4.beta1
 - update to php-7.2.0beta1
 - add sodium extension build and package
