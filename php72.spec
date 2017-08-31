@@ -146,7 +146,6 @@ Patch7: php-5.3.0-recode.patch
 Patch8: php-7.2.0alpha1-libdb.patch
 
 # Fixes for extension modules
-Patch20: php-7.0.22-sqlite3errstr.patch
 
 # Functional changes
 Patch40: php-7.0.17-dlopen.patch
@@ -1005,8 +1004,6 @@ support for using the enchant library to PHP.
 %patch6 -p1 -b .embed
 %patch7 -p1 -b .recode
 %patch8 -p1 -b .libdb
-
-%patch20 -p1 -b .sqlite3errstr
 
 %patch40 -p1 -b .dlopen
 %patch42 -p1 -b .systzdata
@@ -1928,6 +1925,7 @@ fi
 %changelog
 * Fri Sep 01 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.7.RC1
 - update to php-7.2.0RC1
+- remove patch fixed upstream
 
 * Wed Aug 09 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.6.beta2
 - add patch for missing sqlite3_errstr function
