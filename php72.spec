@@ -107,7 +107,7 @@
 %global db_devel  libdb-devel
 %endif
 
-%global rcver beta2
+%global rcver RC1
 
 Summary: PHP scripting language for creating dynamic web sites
 %if 0%{?scl:1}
@@ -116,7 +116,7 @@ Name: %{?scl_prefix}php
 Name: php72w
 %endif
 Version: 7.2.0
-Release: 0.6%{?rcver:.%{rcver}}%{?dist}
+Release: 0.7%{?rcver:.%{rcver}}%{?dist}
 # All files licensed under PHP version 3.01, except
 # Zend is licensed under Zend
 # TSRM is licensed under BSD
@@ -1926,6 +1926,9 @@ fi
 %endif
 
 %changelog
+* Fri Sep 01 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.7.RC1
+- update to php-7.2.0RC1
+
 * Wed Aug 09 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.6.beta2
 - add patch for missing sqlite3_errstr function
 
