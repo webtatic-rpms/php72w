@@ -149,7 +149,7 @@ Patch8: php-7.2.0alpha1-libdb.patch
 
 # Functional changes
 Patch40: php-7.0.17-dlopen.patch
-Patch42: php-7.1.0-systzdata-v14.patch
+Patch42: php-7.2.0-systzdata-v15.patch
 # See http://bugs.php.net/53436
 Patch43: php-5.4.0-phpize.patch
 # Use -lldap_r for OpenLDAP
@@ -1926,6 +1926,7 @@ fi
 * Fri Sep 01 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.7.RC1
 - update to php-7.2.0RC1
 - remove patch fixed upstream
+- update systzdata patch to latest
 
 * Wed Aug 09 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.6.beta2
 - add patch for missing sqlite3_errstr function
