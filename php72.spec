@@ -107,7 +107,7 @@
 %global db_devel  libdb-devel
 %endif
 
-%global rcver RC1
+%global rcver RC2
 
 Summary: PHP scripting language for creating dynamic web sites
 %if 0%{?scl:1}
@@ -146,7 +146,6 @@ Patch7: php-5.3.0-recode.patch
 Patch8: php-7.2.0alpha1-libdb.patch
 
 # Fixes for extension modules
-Patch20: php-7.0.23-sqlitedefine.patch
 
 # Functional changes
 Patch40: php-7.0.17-dlopen.patch
@@ -1005,8 +1004,6 @@ support for using the enchant library to PHP.
 %patch6 -p1 -b .embed
 %patch7 -p1 -b .recode
 %patch8 -p1 -b .libdb
-
-%patch20 -p1 -b .sqlitedefine
 
 %patch40 -p1 -b .dlopen
 %patch42 -p1 -b .systzdata
@@ -1926,8 +1923,8 @@ fi
 %endif
 
 %changelog
-* Thu Sep 14 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.8.RC1
-- add patch for sqlite3_errstr fix correction
+* Thu Sep 14 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.8.RC2
+- update to php-7.2.0RC2
 - rebuild for EL7.4
 
 * Fri Sep 01 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.7.RC1
