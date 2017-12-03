@@ -107,8 +107,6 @@
 %global db_devel  libdb-devel
 %endif
 
-%global rcver RC5
-
 Summary: PHP scripting language for creating dynamic web sites
 %if 0%{?scl:1}
 Name: %{?scl_prefix}php
@@ -116,7 +114,7 @@ Name: %{?scl_prefix}php
 Name: php72w
 %endif
 Version: 7.2.0
-Release: 0.10%{?rcver:.%{rcver}}%{?dist}
+Release: 1%{?rcver:.%{rcver}}%{?dist}
 # All files licensed under PHP version 3.01, except
 # Zend is licensed under Zend
 # TSRM is licensed under BSD
@@ -124,7 +122,7 @@ License: PHP and Zend and BSD
 Group: Development/Languages
 URL: http://www.php.net/
 
-Source0: https://downloads.php.net/~pollita/php-%{version}%{?rcver}.tar.bz2
+Source0: https://secure.php.net/distributions/php-%{version}%{?rcver}.tar.bz2
 Source1: php.conf
 Source2: php.ini
 Source3: macros.php
@@ -1923,6 +1921,9 @@ fi
 %endif
 
 %changelog
+* Sun Oct 29 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-1
+- update to php-7.2.0
+
 * Sun Oct 29 2017 Andy Thompson <andy@webtatic.com> - 7.2.0-0.10.RC5
 - update to php-7.2.0RC5
 
