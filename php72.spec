@@ -20,7 +20,7 @@
 # Extension version
 %global fileinfover 1.0.5
 %global pharver     2.0.2
-%global zipver      1.15.1
+%global zipver      1.15.2
 %global jsonver     1.6.0
 
 # Adds -z now to the linker flags
@@ -1927,6 +1927,7 @@ fi
 - update to php-7.2.2
 - enable argon2 password api hash
 - replace patch46 with SOURCE_DATE_EPOCH
+- update version checks to latest upstream versions
 
 * Sun Jan 14 2018 Andy Thompson <andy@webtatic.com> - 7.2.1-1
 - update to php-7.2.1
