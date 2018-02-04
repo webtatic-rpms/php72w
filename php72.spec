@@ -179,6 +179,7 @@ BuildRequires: sqlite-devel >= 3.0.0
 BuildRequires: zlib-devel, pcre-devel >= 6.6, smtpdaemon, libedit-devel
 BuildRequires: bzip2, perl, libtool >= 1.4.3, gcc-c++
 BuildRequires: libtool-ltdl-devel
+BuildRequires: libargon2-devel
 %if %{with_libzip}
 BuildRequires: libzip-devel >= 0.11
 %endif
@@ -1179,6 +1180,7 @@ ln -sf ../configure
     --without-gdbm \
     --with-jpeg-dir=%{_root_prefix} \
     --with-openssl \
+    --with-password-argon2 \
     --with-pcre-regex \
     --with-zlib \
     --with-layout=GNU \
@@ -1923,6 +1925,7 @@ fi
 %changelog
 * Sun Feb 04 2018 Andy Thompson <andy@webtatic.com> - 7.2.2-1
 - update to php-7.2.2
+- enable argon2 password api hash
 
 * Sun Jan 14 2018 Andy Thompson <andy@webtatic.com> - 7.2.1-1
 - update to php-7.2.1
