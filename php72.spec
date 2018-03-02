@@ -113,7 +113,7 @@ Name: %{?scl_prefix}php
 %else
 Name: php72w
 %endif
-Version: 7.2.2
+Version: 7.2.3
 Release: 1%{?rcver:.%{rcver}}%{?dist}
 # All files licensed under PHP version 3.01, except
 # Zend is licensed under Zend
@@ -1923,6 +1923,9 @@ fi
 %endif
 
 %changelog
+* Fri Mar 02 2018 Andy Thompson <andy@webtatic.com> - 7.2.3-1
+- update to php-7.2.3
+
 * Sun Feb 04 2018 Andy Thompson <andy@webtatic.com> - 7.2.2-1
 - update to php-7.2.2
 - enable argon2 password api hash
