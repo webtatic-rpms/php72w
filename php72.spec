@@ -153,7 +153,7 @@ Patch43: php-5.4.0-phpize.patch
 # Use -lldap_r for OpenLDAP
 Patch45: php-7.1.5-ldap_r.patch
 # Make php_config.h constant across builds
-Patch46: php-7.2.2-fixheader.patch
+Patch46: php-7.2.4-fixheader.patch
 # drop "Configure command" from phpinfo output
 Patch47: php-5.4.9-phpinfo.patch
 Patch48: php-5.5.0-icuconfig.patch
@@ -1928,6 +1928,7 @@ fi
 %changelog
 * Fri Mar 30 2018 Andy Thompson <andy@webtatic.com> - 7.2.4-1
 - update to php-7.2.4
+- update fixheader patch for upstream changes
 
 * Fri Mar 02 2018 Andy Thompson <andy@webtatic.com> - 7.2.3-1
 - update to php-7.2.3
