@@ -64,7 +64,7 @@
 # Build mysqli/pdo extensions using libmysqlclient or only mysqlnd
 %global with_libmysql 1
 
-%global with_sodium   0
+%global with_sodium   1
 
 # Build ZTS extension or only NTS
 %global with_zts      1
@@ -114,7 +114,7 @@ Name: %{?scl_prefix}php
 Name: php72w
 %endif
 Version: 7.2.4
-Release: 1%{?rcver:.%{rcver}}%{?dist}
+Release: 2%{?rcver:.%{rcver}}%{?dist}
 # All files licensed under PHP version 3.01, except
 # Zend is licensed under Zend
 # TSRM is licensed under BSD
@@ -838,7 +838,7 @@ support for using the DBA database abstraction layer to PHP.
 Summary: Wrapper for the Sodium cryptographic library
 License:        BSD
 Group:          Development/Languages
-BuildRequires:  libsodium-devel >= 0.6.0
+BuildRequires:  libsodium-devel >= 1.0.9
 Requires: %{name}-common%{?_isa} = %{version}-%{release}
 %if 0%{!?scl:1}
 Provides: php-sodium = %{version}-%{release}
@@ -1926,6 +1926,9 @@ fi
 %endif
 
 %changelog
+* Sat Apr 21 2018 Andy Thompson <andy@webtatic.com> - 7.2.4-2
+- enable sodium extension
+
 * Fri Mar 30 2018 Andy Thompson <andy@webtatic.com> - 7.2.4-1
 - update to php-7.2.4
 - update fixheader patch for upstream changes
