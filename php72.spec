@@ -147,11 +147,11 @@ Patch8: php-7.2.0alpha1-libdb.patch
 
 # Functional changes
 Patch40: php-7.0.17-dlopen.patch
-Patch42: php-7.2.0-systzdata-v15.patch
+Patch42: php-7.2.3-systzdata-v16.patch
 # See http://bugs.php.net/53436
 Patch43: php-5.4.0-phpize.patch
 # Use -lldap_r for OpenLDAP
-Patch45: php-5.4.8-ldap_r.patch
+Patch45: php-7.2.3-ldap_r.patch
 # drop "Configure command" from phpinfo output
 Patch47: php-5.4.9-phpinfo.patch
 Patch48: php-5.5.0-icuconfig.patch
