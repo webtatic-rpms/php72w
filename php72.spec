@@ -113,8 +113,8 @@ Name: %{?scl_prefix}php
 %else
 Name: php72w
 %endif
-Version: 7.2.4
-Release: 2%{?rcver:.%{rcver}}%{?dist}
+Version: 7.2.5
+Release: 1%{?rcver:.%{rcver}}%{?dist}
 # All files licensed under PHP version 3.01, except
 # Zend is licensed under Zend
 # TSRM is licensed under BSD
@@ -1926,6 +1926,9 @@ fi
 %endif
 
 %changelog
+* Sat Apr 28 2018 Andy Thompson <andy@webtatic.com> - 7.2.5-1
+- update to php-7.2.5
+
 * Sat Apr 21 2018 Andy Thompson <andy@webtatic.com> - 7.2.4-2
 - enable sodium extension
 
