@@ -149,7 +149,7 @@ Patch8: php-7.2.0alpha1-libdb.patch
 Patch40: php-7.0.17-dlopen.patch
 Patch42: php-7.2.3-systzdata-v16.patch
 # See http://bugs.php.net/53436
-Patch43: php-5.4.0-phpize.patch
+Patch43: php-7.1.24-phpize.patch
 # Use -lldap_r for OpenLDAP
 Patch45: php-7.1.5-ldap_r.patch
 # Make php_config.h constant across builds
@@ -1928,6 +1928,7 @@ fi
 %changelog
 * Sat Nov 10 2018 Andy Thompson <andy@webtatic.com> - 7.2.12-1
 - update to php-7.2.12
+- update phpize patch for upstream changes
 
 * Thu Oct 11 2018 Andy Thompson <andy@webtatic.com> - 7.2.11-1
 - update to php-7.2.11
