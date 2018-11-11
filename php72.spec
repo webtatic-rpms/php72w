@@ -20,7 +20,7 @@
 # Extension version
 %global fileinfover 1.0.5
 %global pharver     2.0.2
-%global zipver      1.15.3
+%global zipver      1.15.4
 %global jsonver     1.6.0
 
 # Adds -z now to the linker flags
@@ -1929,6 +1929,7 @@ fi
 * Sat Nov 10 2018 Andy Thompson <andy@webtatic.com> - 7.2.12-1
 - update to php-7.2.12
 - update phpize patch for upstream changes
+- update zipver to upstream version
 
 * Thu Oct 11 2018 Andy Thompson <andy@webtatic.com> - 7.2.11-1
 - update to php-7.2.11
