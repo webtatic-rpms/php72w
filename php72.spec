@@ -791,7 +791,7 @@ License: PHP and BSD
 Requires: %{name}-common%{?_isa} = %{version}-%{release}
 # Required to build the bundled GD library
 BuildRequires: libjpeg-devel, libpng-devel, freetype-devel
-BuildRequires: libXpm-devel, t1lib-devel
+BuildRequires: libXpm-devel, t1lib-devel, libwebp-devel
 %if 0%{!?scl:1}
 Provides: php-gd = %{version}-%{release}
 Provides: php-gd%{?_isa} = %{version}-%{release}
@@ -1207,7 +1207,7 @@ make %{?_smp_mflags}
 with_shared="--with-imap=shared --with-imap-ssl \
       --enable-mbstring=shared \
       --enable-mbregex \
-      --with-gd=shared \
+      --with-gd=shared,--with-webp-dir=%{_libdir}/webp/ \
       --with-gmp=shared \
       --enable-calendar=shared \
       --enable-bcmath=shared \
