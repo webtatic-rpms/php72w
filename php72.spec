@@ -957,7 +957,7 @@ The %{name}-recode package contains a dynamic shared object that will add
 support for using the recode library to PHP.
 
 %package intl
-Summary: Internationalization extension for PHP applications
+Summary: Internationalization extension for PHP a/pplications
 Group: System Environment/Libraries
 # All files licensed under PHP version 3.01
 License: PHP
@@ -1207,7 +1207,8 @@ make %{?_smp_mflags}
 with_shared="--with-imap=shared --with-imap-ssl \
       --enable-mbstring=shared \
       --enable-mbregex \
-      --with-gd=shared,--with-webp-dir=%{_libdir}/webp/ \
+      --with-gd=shared \
+      --with-webp-dir=%{_libdir}/webp/ \
       --with-gmp=shared \
       --enable-calendar=shared \
       --enable-bcmath=shared \
