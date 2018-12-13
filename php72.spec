@@ -957,7 +957,7 @@ The %{name}-recode package contains a dynamic shared object that will add
 support for using the recode library to PHP.
 
 %package intl
-Summary: Internationalization extension for PHP a/pplications
+Summary: Internationalization extension for PHP applications
 Group: System Environment/Libraries
 # All files licensed under PHP version 3.01
 License: PHP
