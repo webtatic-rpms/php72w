@@ -113,7 +113,7 @@ Name: %{?scl_prefix}php
 %else
 Name: php72w
 %endif
-Version: 7.2.14
+Version: 7.2.16
 Release: 1%{?rcver:.%{rcver}}%{?dist}
 # All files licensed under PHP version 3.01, except
 # Zend is licensed under Zend
@@ -1926,6 +1926,9 @@ fi
 %endif
 
 %changelog
+* Sat Mar 09 2019 Andy Thompson <andy@webtatic.com> - 7.2.16-1
+- update to php-7.2.16
+
 * Sat Jan 12 2019 Andy Thompson <andy@webtatic.com> - 7.2.14-1
 - update to php-7.2.14
 
