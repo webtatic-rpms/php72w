@@ -156,7 +156,6 @@ Patch45: php-7.1.5-ldap_r.patch
 Patch46: php-7.2.4-fixheader.patch
 # drop "Configure command" from phpinfo output
 Patch47: php-5.4.9-phpinfo.patch
-Patch48: php-5.5.0-icuconfig.patch
 Patch49: php-7.0.7-curltlsconst.patch
 
 # Fixes for tests
@@ -1012,7 +1011,6 @@ support for using the enchant library to PHP.
 %endif
 %patch46 -p1 -b .fixheader
 %patch47 -p1 -b .phpinfo
-%patch48 -p1 -b .icuconfig
 %if 0%{?rhel} >= 6
 %patch49 -p1 -b .curltlsconst
 %endif
@@ -1267,15 +1265,7 @@ with_shared="--with-imap=shared --with-imap-ssl \
       --with-unixODBC=shared,%{_root_prefix} \
       --enable-fileinfo=shared \
       --enable-intl=shared \
-%if 0%{?fedora} >= 11 || 0%{?rhel} >= 6
       --with-icu-dir=%{_root_prefix} \
-%else
-%if 0%{?scl:1}
-      --with-icu-config=%{_bindir}/icu-config
-%else
-      --with-icu-config=%{_root_bindir}/icu42-icu-config
-%endif
-%endif
       --with-enchant=shared,%{_root_prefix} \
       --with-recode=shared,%{_root_prefix} \
       --enable-opcache"
@@ -1928,6 +1918,7 @@ fi
 %changelog
 * Sat Mar 09 2019 Andy Thompson <andy@webtatic.com> - 7.2.16-1
 - update to php-7.2.16
+- drop obsolete icuconfig patch
 
 * Sat Jan 12 2019 Andy Thompson <andy@webtatic.com> - 7.2.14-1
 - update to php-7.2.14
