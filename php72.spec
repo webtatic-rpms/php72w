@@ -147,7 +147,7 @@ Patch8: php-7.2.0alpha1-libdb.patch
 
 # Functional changes
 Patch40: php-7.0.17-dlopen.patch
-Patch42: php-7.2.3-systzdata-v16.patch
+Patch42: php-7.2.16-systzdata-v17.patch
 # See http://bugs.php.net/53436
 Patch43: php-7.1.24-phpize.patch
 # Use -lldap_r for OpenLDAP
@@ -1919,6 +1919,7 @@ fi
 * Sat Mar 09 2019 Andy Thompson <andy@webtatic.com> - 7.2.16-1
 - update to php-7.2.16
 - drop obsolete icuconfig patch
+- update systzdata patch
 
 * Sat Jan 12 2019 Andy Thompson <andy@webtatic.com> - 7.2.14-1
 - update to php-7.2.14
