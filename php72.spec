@@ -1916,6 +1916,9 @@ fi
 %endif
 
 %changelog
+* Mon May 09 2019 Andy Thompson <andy@webtatic.com> - 7.2.18-1
+- update to php-7.2.18
+
 * Tue Apr 09 2019 Andy Thompson <andy@webtatic.com> - 7.2.17-1
 - update to php-7.2.17
 
